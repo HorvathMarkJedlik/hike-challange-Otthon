@@ -1,0 +1,38 @@
+<div class="card">
+    <img [src]="challange?.image" alt="">
+    <div class="date">{{challange?.date}}</div>
+    <h3>{{challange?.name}}</h3>
+    <div class="address">
+        <img src="images/mapmark.svg" alt="" class="mapmark">
+        <span>{{challange?.from}}</span>
+    </div>
+    <div class="description">
+        @for (line of challange?.info; track $index) {
+            <p>{{line}}</p>
+        }
+    </div>
+    <div class="distances">
+        @for (distance of challange?.distances; track $index) {
+            <div class="distance">
+                <h4>{{distance.name}}</h4>
+                <table>
+                    <tr>
+                        <td>Nevezési díj:</td>
+                        <td>{{distance.fee}}</td>
+                        <td>Távolság:</td>
+                        <td>{{distance.distance}}</td>
+                    </tr>
+                    <tr>
+                        <td>Szintidő:</td>
+                        <td>{{distance.maxtime}}</td>
+                        <td>Szint:</td>
+                        <td>{{distance.level}}</td>
+                    </tr>
+                </table>
+                <div class="apply">
+                    <button>Jelentkezem</button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
