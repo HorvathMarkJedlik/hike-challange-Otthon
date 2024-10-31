@@ -78,3 +78,14 @@ div.card div.details button{
     color: #eee;
 
 }
+
+div.fees{
+    text-align: center;
+    background-color: #E74C3C;
+    color: #ff0;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    width: 600px;
+    margin: 6px auto;
+    padding: 8px;
+}

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ChallenegeModel } from '../models/challange-model';
 
 @Component({
   selector: 'app-challange-details',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './challange-details.component.css'
 })
 export class ChallangeDetailsComponent {
-
+ @Input() challange: ChallenegeModel | undefined;
 }

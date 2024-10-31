@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { ChallenegeModel } from '../models/challange-model';
+import { ChallangeDetailsComponent } from "../challange-details/challange-details.component";
 
 @Component({
   selector: 'app-challange-list',
   standalone: true,
-  imports: [],
+  imports: [ChallangeDetailsComponent],
   templateUrl: './challange-list.component.html',
   styleUrl: './challange-list.component.css'
 })
@@ -364,5 +365,9 @@ export class ChallangeListComponent {
       ],
     },
   ];
+
+  sumFee: number = 0;
+
+  selectedChallange: ChallenegeModel | undefined;
 }
 

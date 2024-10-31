@@ -14,9 +14,15 @@
                 }
             </div>
             <div class="details">
-                <button>Részletek</button>
+                <button (click)="selectedChallange = ch">Részletek</button>
             </div>
         </div>
     }
 
 </div>
+
+<div class="fees">Az eddigi jelentkezések össz nevezési díja: {{sumFee}} Ft</div>
+
+@if (selectedChallange){
+    <app-challange-details [challange]="selectedChallange" ></app-challange-details>
+}
