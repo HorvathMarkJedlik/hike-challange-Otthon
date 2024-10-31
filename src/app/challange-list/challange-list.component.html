@@ -1,16 +1,17 @@
 <div class="cards">
-    @for (challange of challenges; track $index) {
-
+    @for (ch of challenges; track $index) {
         <div class="card" >
-            <img alt="" src="">
-            <div class="date" ></div>
-            <h3></h3>
+            <img alt="" [src]="ch.image">
+            <div class="date"> {{ch.date}}</div>
+            <h3>{{ch.name}}</h3>
             <div class="address">
-                <img>
-                <span></span>
+                <img src="images/mapmark.svg" class="mapmark">
+                <span>{{ch.from}}</span>
             </div>
-            <div class="desciption">
-                <p></p>
+            <div class="description">
+                @for (line of ch.info; track $index){
+                    <p>{{line}}</p>
+                }
             </div>
             <div class="details">
                 <button>Részletek</button>

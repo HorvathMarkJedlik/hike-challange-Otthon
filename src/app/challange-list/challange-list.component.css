@@ -8,7 +8,7 @@ div.cards{
 }
 
 div.card{
-    width: 400px;
+    min-width: 400px;
     margin: 6px;
     border: 2px solid #E74C3C;
     border-radius: 10px;
@@ -41,7 +41,7 @@ div.card div.address{
     align-content: center;
 }
 
-div.card div.adress img.mapmark {
+div.card div.address img.mapmark {
     height: 24px;
     width: 24px;
     display: inline-block;
