@@ -369,5 +369,15 @@ export class ChallangeListComponent {
   sumFee: number = 0;
 
   selectedChallange: ChallenegeModel | undefined;
+
+  recalculateFees(): void {
+    let sum = 0;
+    this.challenges.forEach(c =>c.distances.forEach(d=> {
+      if (d.applied){
+        sum += d.fee;
+      }
+    }));
+    this.sumFee = sum;
+  }
 }
 

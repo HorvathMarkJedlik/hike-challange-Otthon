@@ -29,8 +29,14 @@
                         <td>{{distance.level}}</td>
                     </tr>
                 </table>
+
                 <div class="apply">
-                    <button>Jelentkezem</button>
+                    @if(distance.applied){
+                        <button (click)="apply(distance, false)">Jelentkezés visszavonása</button>
+                    }
+                    @else {
+                        <button (click)="apply(distance, true)">Jelentkezem</button>
+                    }
                 </div>
             </div>
         }
